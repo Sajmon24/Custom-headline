@@ -4,6 +4,12 @@ let colors = prompt(
   "023, 159, 266"
 );
 
+// Cancel button
+if (!colors) {
+  alert("You need to confirm your choice, by clicking 'OK'");
+  location.reload();
+}
+
 // function for applying randomized choosen color
 const loadAPI = async (color1, color2, color3) => {
   //Editing of input for better functionality
