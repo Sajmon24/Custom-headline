@@ -50,7 +50,7 @@ const loadAPI = async (color1, color2, color3) => {
     }
   } catch (err) {
     console.log(err, err.message, "error");
-    alert("Error:", err.message);
+    alert(`Error: ${err.message}`);
   }
 };
 
