@@ -35,9 +35,9 @@ const loadAPI = async (color1, color2, color3) => {
   let promiseAPI;
   try {
     promiseAPI = await Promise.all([
-      (await fetch(`https://x-colors.yurace.pro/api/random/${color1}`)).json(),
-      (await fetch(`https://x-colors.yurace.pro/api/random/${color2}`)).json(),
-      (await fetch(`https://x-colors.yurace.pro/api/random/${color3}`)).json(),
+      (await fetch(`https://x-colors.yurace.pro/api/random/${color1}`))?.json(),
+      (await fetch(`https://x-colors.yurace.pro/api/random/${color2}`))?.json(),
+      (await fetch(`https://x-colors.yurace.pro/api/random/${color3}`))?.json(),
     ]);
     // Aplying style
     headlineH1.style.color = promiseAPI[0].rgb;
